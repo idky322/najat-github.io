@@ -1,5 +1,5 @@
-import ddf.minim.
-import ddf.minim.analysis.*;
+import ddf.mini. //<>//
+import ddf.minim.analysis.*; //<>//
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
@@ -8,9 +8,11 @@ import ddf.minim.ugens.*;
 Global Variables
 Minim minim;
 int numberOfSongs = 8; Able to Autodetect based on Pathway
-AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+.AudioPlayer[] song = new AudioPlayer[numberOfSongs];
 int currentSong = numberOfSongs - numberOfSongs;  beginning current song as ZERO
-//
+\\
+int appWidth,appHeight;
+float imageDIV_X, im\k
 void setup()
 {
   size(900, 800);
@@ -28,7 +30,7 @@ void setup()
   String groove = "groove";
   String newsroom = "Newsroom";
   String startYourEngines = "Start_Your_Engines";
-  String theSimplest = "The_Simplest";
+  String theSimplest ="The_Simplest";
   //
   Add Reading into Array
   String directory = "../../" + musicPathway;
@@ -88,7 +90,7 @@ void keyPressed() {
   musicButtonSquareHeight = musicButtonDIV_Height;
   float padding1 = musicButtonDIV_Width - musicButtonDIV_Height; working out value needed, with formulae
   float padding2 = padding1*1/2; working out value needed, with formulae
-  musicButtonSquareX = musicButtonDIV_X + padding2; //note: minus moves it the wrong way, difficult to see
+  musicButtonSquareX = musicButtonDIV_X + padding2; note: minus moves it the wrong way, difficult to see
   musicButtonSquareY = musicButtonDIV_Y;
   println( musicButtonDIV_X, musicButtonDIV_Y, musicButtonDIV_Width, musicButtonDIV_Height );
   println ( musicButtonSquareX, musicButtonSquareY, musicButtonSquareWidth, musicButtonSquareHeight );
@@ -96,30 +98,28 @@ void keyPressed() {
   //
   Work out a case Study: Portrait
   /*
-  if ( musicButtonDIV_Width >= musicButtonDIV_Height ) { error: square does not go in the middle
+   musicButtonDIV_Width >= musicButtonDIV_Height ) { error: square does not go in the middle
    musicButtonWidth needs to change
    musicButtonSquareWidth = musicButtonDIV_Height;
    musicButtonSquareHeight = musicButtonDIV_Height;
    musicButtonSquareX = musicButtonDIV_X + ( ( musicButtonDIV_Width - musicButtonDIV_Height )*1/2 );
    musicButtonSquareY = musicButtonDIV_Y;
-   } else {
    musicButtonHeight needs to change
    musicButtonSquareWidth = musicButtonDIV_Width;
    musicButtonSquareHeight = musicButtonDIV_Width;
    musicButtonSquareX = musicButtonDIV_X;
    musicButtonSquareY = musicButtonDIV_Y + musicButtonDIV_Width*1/2;
    }
-   */
+   *
   float padding = 1.0/4.0;
   float stopButtonSize = 1.0-(1.0/4.0);
-  /*
+  *
   stopWidth = musicButtonDIV_Width*stopButtonSize; stopButtonSize
   stopHeight = musicButtonDIV_Height*stopButtonSize; stopButtonSize
   stopX = musicButtonDIV_X+padding;
   stopY = musicButtonDIV_Y+padding;
-  */
-  //
-  /*
+  *
+  *
     if ( musicButtonWidth >= musicButtonHeight ) { error: square does not go in the middle
     musicButtonWidth needs to change
     musicButtonWidth = musicButtonHeight;
@@ -170,7 +170,7 @@ void setup()
 {
   size(1000, 800);
 @@ -103,7 +105,7 @@ void setup()
-} //End setup
+} End setup
 //
 void draw() {
   background(200);  Gray Scale: 0-255
@@ -182,7 +182,7 @@ void draw() {
    //*/
   if ( day ) {} else if ( dark ) {} else {}
   //
-  fill(); //Colour
+  fill(); Colour
   if ( mouseX>musicButtonSquareX && mouseX<musicButtonSquareX+musicButtonSquareWidth && mouseY>musicButtonSquareY && mouseY<musicButtonSquareY+musicButtonSquareHeight ) {
     fill(yellow); Colour
   } else {
@@ -194,7 +194,7 @@ void draw() {
   //
   rect( stopX, stopY, stopWidth, stopHeight ); (X, Y, width, height, roundedEdge1, roundedEdge2, roundedEdge3, roundedEdge4, )
   noFill();
-  fill(255); //noFill();
+  fill(255); noFill();
   noStroke();
   //
   Music Buttons Interactions: cascading IFs can become AND Statements
@@ -206,3 +206,29 @@ Note: CAP Lock with ||
 Note: CAP Lock with ||
 if ( key==? || key==? ) ;
 End keyPressed
+}
+if ( key==CODED || keyCode==UP ) exit();  QUIT UP
+if ( key=='Q' || key=='q') exit(); QUIT
+//
+if ( key==''|| key=='' ) ; // NEXT See .txt for starter hint
+ if ( song[currentSong]. isPlaying() ) {
+     song[currentSong].pause();
+     song[currentSong].rewind();
+     // 
+     if ( currentSong==7 ) {
+       currentSong = 0;
+     } else {
+        currentSong++;
+     }
+     println("The current song is", currentS);
+     song[currentSong].play();
+     
+ } else {
+   //
+   println("The current song is", currentSong);
+   //song[currentsong.].eplay();
+ }
+}
+//if ( key=='' || key=='' )
+int appwidh, appheight;
+float background
